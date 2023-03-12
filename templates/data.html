@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <title>Results</title>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dataStyles.css') }}"> -->
+  </head>
+<header>
+
+<h1> RESULTS </h1>
+<table border="1">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        {% for z in contact_cols %}
+          <th scope="col">{{ z }}</th>
+        {% endfor %}
+        {% for a in data_cols %}
+          <th scope="col">{{ a }}</th>
+        {% endfor %}
+      </tr>
+  
+    </thead>
+    <tbody>
+    {% for i in data %}
+    <tr> 
+      {% for r in contact[loop.index0] %}
+      <td> 
+        
+        {{ r }} 
+      
+      </td>
+      {% endfor %}
+      {% for s in data[loop.index0] %}
+      <td> 
+        
+        {{ s }} 
+      
+      </td>
+      {% endfor %}
+    
+    </tr>
+     
+    {% endfor %}
+  </tbody>
+  </table>  
+
+
+</header>  

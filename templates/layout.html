@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='login_styles.css') }}"> {% endblock %}
+		<script src="https://kit.fontawesome.com/319dc572c6.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>Energy Masters</h1>
+                <a href="{{ url_for('numbers', z=1) }}"><i class="fa-solid fa-list-ol"></i>Workday Numbers</a>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>

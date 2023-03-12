@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='login_styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='numbers.css') }}">
+{% endblock %}
+
+
+{% block title %}Workday Numbers{% endblock %}
+
+{% block content %}
+<h2>Workday Numbers</h2>
+<section class='heading1'>
+    <section class = 'col headingmain'>
+        <section class = 'box'><p><a href="{{ url_for('numbers', z=1) }}"> 11/05/2022</a></p> </section>
+        <section class = 'box'><p><a href="{{ url_for('numbers', z=2) }}"> 12/10/2022</a></p> </section>
+        <section class = 'box'><p><a href="{{ url_for('numbers', z=3) }}"> 2L2DRN </a></p> </section>
+        <section class = 'box'><p><a href="{{ url_for('numbers', z=4) }}"> 2L2DRN</a></p> </section>
+
+    </section>
+
+    <section class = 'col heading2'>
+        <em><p>{{x[1]}} Workday Results/Numbers</p></em>
+    </section>
+    <section class="col one">
+        <p>Location : {{x[2]}}</p>
+    </section>
+    <section class="col two">
+        <p>{{x[3]}} Light Bulbs Replaced</p>
+    </section>
+    <section class="col three">     
+        <p>{{x[4]}} Light Switches Sealed</p>
+    </section>
+    
+    <section class="col four">     
+        <p>{{x[5]}} Outlets Sealed</p>
+    </section>
+    <section class="col five">     
+        <p>{{x[6]}} Windows With Less or No Leakage</p>
+    </section>
+    <section class="col six">     
+        <p>{{x[7]}} Vents Sealed</p>
+    </section>
+    <section class="col seven">     
+        <p>{{x[8]}} Baseboard Heaters Better Sealed</p>
+    </section>
+    <section class="col eight">     
+        <p>{{x[9]}} Kitchen/Bath Aerators Inserted</p>
+    </section>
+    <section class="col nine">     
+        <p>{{x[10]}} Shower Heads Replaced</p>
+    </section>
+</section>
+
+{% endblock %}

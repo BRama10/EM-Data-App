@@ -1,0 +1,8 @@
+p {
+    font-weight: bold;
+    text-align: center;
+}
+
+p:link {
+    color: inherit;
+}
